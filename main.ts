@@ -14,7 +14,16 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     timeDelta = timeEnd - timeStart
-    basic.showNumber(timeDelta)
+    for (let index = 0; index < 5; index++) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        basic.showNumber(timeDelta)
+    }
 })
 input.onPinPressed(TouchPin.P1, function () {
     timeEnd = input.runningTime()
